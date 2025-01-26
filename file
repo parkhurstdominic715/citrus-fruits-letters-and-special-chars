@@ -1,0 +1,33 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] citrusFruits = { "Orange", "Lemon", "Lime", "Grapefruit", "Tangerine" };
+        char[] letters = { 'a', 'b', 'c', 'd' };
+        string specialChars = "!@#$%";
+
+        int fruitIndex = 0;
+
+        for (int i = 0; i < 20; i++) // Adjust loop size as needed
+        {
+            if (i % 2 == 0 && fruitIndex < citrusFruits.Length) // Mimicking SQL "AND" logic
+            {
+                Console.WriteLine($"Citrus Fruit: {citrusFruits[fruitIndex]}");
+                fruitIndex++;
+            }
+            else if (i % 2 != 0 && i < specialChars.Length) // Switching between letters and special chars
+            {
+                Console.WriteLine($"Special Char: {specialChars[i % specialChars.Length]}");
+            }
+            else
+            {
+                Console.WriteLine($"Letter: {letters[i % letters.Length]}");
+            }
+        }
+    }
+}
